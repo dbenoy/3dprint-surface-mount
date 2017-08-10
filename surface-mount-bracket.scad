@@ -8,7 +8,7 @@ module clip(width, height, thickness, tooth_size) {
     }
 }
 
-module fh_screw_hole(diameter, head_diameter, countersink_angle, length) {
+module fh_screw_hole(diameter, head_diameter, length) {
     cylinder(d1=head_diameter, d2=0, h=head_diameter/2);
     cylinder(d=diameter, h=length);
 }
@@ -21,8 +21,7 @@ module surface_mount_corner(
     clip_thickness=2,
     tooth_size=5,
     screw_diameter=3.45,
-    screw_head_diameter=6.90,
-    screw_countersink_angle=90
+    screw_head_diameter=6.90
 ) {
     rotate([90, 0, 0]) translate([-clip_thickness, -clip_thickness, -base_thickness]) difference() {
         intersection() {
@@ -34,7 +33,7 @@ module surface_mount_corner(
                 translate([clip_thickness + tooth_size + tolerence, 0, 0]) mirror([1, 0, 0]) rotate([0, 0, 90]) clip(width=bracket_width + clip_thickness, height=height, thickness=clip_thickness, tooth_size=tooth_size);
             }
         }
-        translate([bracket_width/2.5, bracket_width/2.5, base_thickness + 0.1]) rotate([180, 0, 0]) fh_screw_hole(diameter=screw_diameter, head_diameter=screw_head_diameter, countersink_angle=screw_countersink_angle, length=base_thickness+0.2);
+        translate([bracket_width/2.5, bracket_width/2.5, base_thickness + 0.1]) rotate([180, 0, 0]) fh_screw_hole(diameter=screw_diameter, head_diameter=screw_head_diameter, length=base_thickness+0.2);
     }
 }
 
@@ -45,8 +44,7 @@ module surface_mount_side(
     clip_thickness=2,
     tooth_size=5,
     screw_diameter=3.45,
-    screw_head_diameter=6.90,
-    screw_countersink_angle=90
+    screw_head_diameter=6.90
 ) {
     rotate([90, 0, 0]) translate([-clip_thickness, 0, -base_thickness]) difference() {
         intersection() {
@@ -60,7 +58,7 @@ module surface_mount_side(
                 translate([0, 0, base_thickness]) clip(width=bracket_width, height=height, thickness=clip_thickness, tooth_size=tooth_size);
             }
         }
-        translate([clip_thickness + bracket_width/2.5, bracket_width/2, base_thickness + 0.1]) rotate([180, 0, 0]) fh_screw_hole(diameter=screw_diameter, head_diameter=screw_head_diameter, countersink_angle=screw_countersink_angle, length=base_thickness+0.2);
+        translate([clip_thickness + bracket_width/2.5, bracket_width/2, base_thickness + 0.1]) rotate([180, 0, 0]) fh_screw_hole(diameter=screw_diameter, head_diameter=screw_head_diameter, length=base_thickness+0.2);
     }
 }
 
