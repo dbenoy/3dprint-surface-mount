@@ -24,7 +24,7 @@ base_thickness=5;
 screw_diameter=3.45;
 
 // The diameter of the head of the screw (For countersinking)
-screw_head_diameter=6.90;
+screw_head_diameter=6.9;
 
 // The separation tolerance (This is to prevent things from fusing together that aren't supposed to, and will depend on your printer. You probably don't have to change this)
 tolerence=0.1;
