@@ -6,19 +6,19 @@ $fn=60;
 type = 0; // [0:Corner, 1:Side]
 
 // The width of the entire bracket not counting the clip thickness
-bracket_width=50;
+bracket_width=30;
 
 // The thickness of the clips (the parts that grip on the object with the tooth on top)
-clip_thickness=2;
+clip_thickness=3;
 
 // How deep and tall the teeth are
-tooth_size=5;
+tooth_size=4;
 
 // The height of the object that will be put in the bracket
 height=25;
 
 // The thickness of the base of the object (Make sure it's thick enough to accomodate your desired screw size)
-base_thickness=3;
+base_thickness=5;
 
 // The diameter of the screw hole
 screw_diameter=3.45;
@@ -26,7 +26,7 @@ screw_diameter=3.45;
 // The diameter of the head of the screw (For countersinking)
 screw_head_diameter=6.90;
 
-// The separation tolerance (This is to prevent things from fusing together that shouldn't, and will depend on your printer. You probably don't have to change this)
+// The separation tolerance (This is to prevent things from fusing together that aren't supposed to, and will depend on your printer. You probably don't have to change this)
 tolerence=0.1;
 
 //CUSTOMIZER VARIABLES END
